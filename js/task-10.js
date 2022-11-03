@@ -14,15 +14,16 @@ function getAmount() {
 
 function createBoxes(amount) {
   const basicSize = 30;
-  const fragment = document.createDocumentFragment();
+  // const fragment = document.createDocumentFragment();
 
   for (let i = 0; i < amount; i += 1) {
     const size = basicSize + i * 10;
     const div = document.createElement("div");
     div.style.cssText = `width: ${size}px; height: ${size}px; background-color: ${getRandomHexColor()}`;
-    fragment.appendChild(div);
+    boxes.appendChild(div);
+    // fragment.appendChild(div);
   }
-  boxes.appendChild(fragment);
+  // boxes.appendChild(fragment);
 }
 
 function destroyBoxes() {

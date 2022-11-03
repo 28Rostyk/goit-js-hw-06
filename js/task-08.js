@@ -6,13 +6,19 @@ function onFormSubmit(event) {
   const formElements = event.currentTarget.elements;
   const mail = formElements.email.value;
   const password = formElements.password.value;
-
   const formData = {
     mail,
     password,
   };
-  mail && password !== ""
-    ? console.log(formData)
-    : alert("не введені всі поля");
+
+  if (mail !== "" && password !== "") {
+    console.log(formData);
+    return;
+  }
+  alert("не введені всі поля");
+
+  // mail !== "" && password !== ""
+  //   ? console.log(formData)
+  //   : alert("не введені всі поля");
   form.reset();
 }

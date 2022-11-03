@@ -15,9 +15,10 @@ const ingredientsEl = document.querySelector("#ingredients");
 //   ingredientsEl.append(item);
 // }
 
-ingredients.map((el) => {
+const listItems = ingredients.map((el) => {
   const item = document.createElement("li");
   item.textContent = el;
   item.classList.add("item");
-  ingredientsEl.append(item);
+  return item;
 });
+ingredientsEl.append(...listItems);
