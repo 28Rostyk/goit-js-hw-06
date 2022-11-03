@@ -13,12 +13,12 @@ function onFormSubmit(event) {
 
   if (mail !== "" && password !== "") {
     console.log(formData);
+    form.reset();
     return;
   }
   alert("не введені всі поля");
-
+  form.reset();
   // mail !== "" && password !== ""
   //   ? console.log(formData)
   //   : alert("не введені всі поля");
-  form.reset();
 }
